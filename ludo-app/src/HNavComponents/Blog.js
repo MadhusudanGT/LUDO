@@ -1,12 +1,12 @@
 import Header from "./Header";
 
-const Contact = () =>{
+const Blog = () =>{
     return(
         <div>
             <Header/>
-            <b>CONTACT</b>
+           <b> BLOG Component</b>
         </div>
     )
     }
     
-    export default Contact;
+    export default Blog;

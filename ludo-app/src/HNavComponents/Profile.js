@@ -1,12 +1,12 @@
 import Header from "./Header";
 
-const Blog = () =>{
+const Profile = () =>{
     return(
         <div>
             <Header/>
-           <b> BLOG</b>
+            <b>Profile Componets</b>
         </div>
     )
     }
     
-    export default Blog;
+    export default Profile;

@@ -1,0 +1,12 @@
+.bkgc{
+  background-color: "SlateBlue";
+}
+.center{
+  text-align: center;
+  margin: 20px;
+}
+
+.spaceBetween{
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

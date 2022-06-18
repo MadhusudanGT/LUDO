@@ -1,12 +1,12 @@
 import Header from "./Header";
 
-const Profile = () =>{
+const Contact = () =>{
     return(
         <div>
             <Header/>
-            <b>Profile</b>
+            <b>CONTACT Componet</b>
         </div>
     )
     }
     
-    export default Profile;
+    export default Contact;

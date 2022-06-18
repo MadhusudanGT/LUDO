@@ -5,9 +5,11 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { StyledEngineProvider } from "@mui/material/styles";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Blog from "./components/Blog";
+import Home from "./HNavComponents/Home";
+import Contact from "./HNavComponents/Contact";
+import Blog from "./HNavComponents/Blog";
+import Events from "./Component/events";
+import About from "./Component/about";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +21,8 @@ root.render(
           <Route path="/Home" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Events" element={<Events />} />
         </Routes>
       </BrowserRouter>
     </StyledEngineProvider>
