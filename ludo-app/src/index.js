@@ -1,5 +1,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,6 +14,24 @@ import Events from "./Component/events";
 import About from "./Component/about";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const  firebaseConfig = {
+  apiKey: "AIzaSyCT2RjMZ1zgCIUp4J2YqHubcWCHlYAU4Oc",
+  authDomain: "react-tracker-206d3.firebaseapp.com",
+  projectId: "react-tracker-206d3",
+  storageBucket: "react-tracker-206d3.appspot.com",
+  messagingSenderId: "181914812270",
+  appId: "1:181914812270:web:e2b9df9036d25bddad4b7f",
+  measurementId: "G-ME5L6CPH14"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Analytics and get a reference to the service
+const analytics = getAnalytics(app);
+
 root.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>

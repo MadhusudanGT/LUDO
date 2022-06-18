@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect }  from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -20,11 +21,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import ResponsiveGrid from "./ResponsiveGrid";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const bull = (
   <Box
@@ -86,6 +86,15 @@ const Header = () => {
     // console.log(hideBoard);
   };
 
+  useEffect(()=>{
+    const analytics = getAnalytics();
+    // logEvent(analytics, 'select_content', {
+    //   content_type: 'image',
+    //   content_id: 'P12453',
+    //   items: [{ name: 'Kittens' }]
+    // });
+    logEvent(analytics, 'Header file', { name: 'lever_puzzle'});
+  })
   return (
     <>
       <div style={{ backgroundColor: "SlateBlue" }}>

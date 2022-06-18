@@ -1,7 +1,12 @@
 import Header from "../HNavComponents/Header";
-import React from 'react';
+import React, { useEffect } from 'react';
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Events = () => {
+	useEffect(()=>{
+        const analytics = getAnalytics();
+        logEvent(analytics, 'events file', { name: 'events'});
+      },[])
 return (
 	<div>
 		<Header/>
